@@ -7,6 +7,12 @@ version = "0.1"
 group = "com.pudding"
 
 repositories {
+    //    本地仓库
+    mavenLocal()
+//    远程仓库
+    maven {
+        url 'http://maven.aliyun.com/nexus/content/groups/public/'
+    }
     mavenCentral()
     jcenter()
 }
@@ -25,6 +31,8 @@ dependencies {
     implementation("io.micronaut:micronaut-runtime")
     implementation("io.micronaut:micronaut-http-client")
     runtimeOnly("ch.qos.logback:logback-classic")
+    implementation('org.projectlombok:lombok:1.18.8')
+    annotationProcessor 'org.projectlombok:lombok:1.18.8'
 }
 
 
